@@ -1,8 +1,13 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./generateMarkdown.js');
-const { inherits } = require('util');
+const generateMarkdown = require('./generateMarkdown.js')
+// const license = require('./licensechoices.js')
+
+
+
+
+// const { inherits } = require('util');
 // const path = reqiure('path');
 
 
@@ -30,7 +35,8 @@ const { inherits } = require('util');
 
 
 // TODO: Create an array of questions for user input
-const prompts =[
+inquirer
+.prompt([
   {
     type: 'input',
     name: 'title',
@@ -83,61 +89,38 @@ const prompts =[
     type: 'input',
     name: 'linkedin',
     message: 'Paste your LinkedIn profile url here'
-  }
-]
-.then((answers) => {
-    const mdPageContent = generateMarkdown(answers);
+  },
+])
+// .then((answers) => {
+//     const readmeContent = generateMarkdown(answers);
+    
+//     fs.writeFile('sampleREADME.md', readmeContent, (err) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         console.log('Successfully created README!');
+//       }
+//     });
+//   });
   
-    fs.writeFile('YourNewReadme.md', mdPageContent, (err) =>
-    err ? console.log(err) : console.log('IT WORKED!'))
-  });
+//   module.exports = generateMarkdown;
 
 
-// const makeNewFile = (answers) => {
-//     return `
-//     #${answers.title}
-
-//     ## Table Of Contents
-//     - Description
-//     - License
-//     - Installation
-//     - Test
-//     - Usage
-//     - Contributing
-//     - Credits
-//     - Questions
-    
-//     ## Description 
-    
-//     ${answers.description}
-
-//     ## License
-//     ${answers.license}
-
-//     ## Installation
-//     ${answers.installation}
-
-//     ## Test
-//     ${answers.test}
-
-//     ## Usage
-//     ${answers.usage}
-
-//     ## Contributing
-//     ${answers.contributing}
-
-//     ## Credits
-//     ${answers.github}
-//     ${answers.email}
-//     ${answers.linkedin}
-
-//     # Questions
-//     For any questions reach out to me at ${answers.email} or at my GitHub ${answers.github}
-//     `
+//  function whateverWrite(filename, data) {
+//  return fs.whateverWriteSync(path.join(process.cwd(), filename), data);
 // }
+// 
 
 
-// TODO: Create a function to write README file
+
+// .then((answers) => {
+//     const mdPageContent = generateMarkdown(answers);
+  
+//     fs.writeFile('YourNewReadme.md', mdPageContent, (err) =>
+//     err ? console.log(err) : console.log('IT WORKED!'))
+//   });
+
+  // TODO: Create a function to write README file
 
 
 
@@ -145,8 +128,26 @@ const prompts =[
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(prompts).then(inquireResponses)
-}
+    inquirer.prompt(prompts).then((inquireResponses) => {
+        const mdPageContent = generateMarkdown(inquireResponses);
+        fs.writeFile('YourNewReadme.md', mdPageContent, (err) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("It Worked, check your new file");
+            }
+            });
+        });
+    }
+    
+
+
 
 // Function call to initialize app
 init();
+
+
+
+// const makeNewFile = (answers) => {
+//     return `
+//     #${answers.title}
