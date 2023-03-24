@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./generateMarkdown.js');
+const { inherits } = require('util');
 // const path = reqiure('path');
 
 
@@ -28,8 +30,7 @@ const fs = require('fs');
 
 
 // TODO: Create an array of questions for user input
-inquirer
-  .prompt([
+const prompts =[
   {
     type: 'input',
     name: 'title',
@@ -83,57 +84,57 @@ inquirer
     name: 'linkedin',
     message: 'Paste your LinkedIn profile url here'
   }
-])
+]
 .then((answers) => {
-    const pageContent = makeNewFile(answers)
+    const mdPageContent = generateMarkdown(answers);
   
-    fs.writeFile('YourNewReadme.md', pageContent, (err) =>
+    fs.writeFile('YourNewReadme.md', mdPageContent, (err) =>
     err ? console.log(err) : console.log('IT WORKED!'))
   });
 
 
-const makeNewFile = (answers) => {
-    return `
-    #${answers.title}
+// const makeNewFile = (answers) => {
+//     return `
+//     #${answers.title}
 
-    ## Table Of Contents
-    - Description
-    - License
-    - Installation
-    - Test
-    - Usage
-    - Contributing
-    - Credits
-    - Questions
+//     ## Table Of Contents
+//     - Description
+//     - License
+//     - Installation
+//     - Test
+//     - Usage
+//     - Contributing
+//     - Credits
+//     - Questions
     
-    ## Description 
+//     ## Description 
     
-    ${answers.description}
+//     ${answers.description}
 
-    ## License
-    ${answers.license}
+//     ## License
+//     ${answers.license}
 
-    ## Installation
-    ${answers.installation}
+//     ## Installation
+//     ${answers.installation}
 
-    ## Test
-    ${answers.test}
+//     ## Test
+//     ${answers.test}
 
-    ## Usage
-    ${answers.usage}
+//     ## Usage
+//     ${answers.usage}
 
-    ## Contributing
-    ${answers.contributing}
+//     ## Contributing
+//     ${answers.contributing}
 
-    ## Credits
-    ${answers.github}
-    ${answers.email}
-    ${answers.linkedin}
+//     ## Credits
+//     ${answers.github}
+//     ${answers.email}
+//     ${answers.linkedin}
 
-    # Questions
-    For any questions reach out to me at ${answers.email} or at my GitHub ${answers.github}
-    `
-}
+//     # Questions
+//     For any questions reach out to me at ${answers.email} or at my GitHub ${answers.github}
+//     `
+// }
 
 
 // TODO: Create a function to write README file
@@ -143,7 +144,9 @@ const makeNewFile = (answers) => {
 // function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(prompts).then(inquireResponses)
+}
 
 // Function call to initialize app
 init();
