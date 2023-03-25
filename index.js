@@ -23,7 +23,7 @@ inquirer.prompt([
     type: 'list',
     name: 'license',
     message: 'What kind of license should your project have?',
-    choices: ['MIT', 'APACHE 11', 'GPLv3', 'None'],
+    choices: ['MIT', 'APACHE-11', 'GPLv3', 'None'],
   },
   {
     type: 'input',
@@ -78,6 +78,15 @@ init()
   // TODO: Create a function to write README file
 
 
+
+
+
+
+
+
+
+
+//   Below is some stuff that I couldn't get to work. I felt like I was on to something but it never came together
 
 // function writeToFile(fileName, data) {}
 
