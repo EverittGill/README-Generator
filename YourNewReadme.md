@@ -1,5 +1,5 @@
-# asdf
-  undefined
+# test
+  ![licenseBadge](https://img.shields.io/badge/MIT-blue.svg)
 
   ## Table Of Contents
   - [Description](#description)
@@ -19,21 +19,21 @@
   MIT
 
   ## Installation
-  asdf
+  npm i
 
   ## Test
-  asdf
+  npm test
 
   ## Usage
-  adsf
+  asdf
 
   ## Contributing
-  asdf
+  fdsa
 
   ## Credits
   asdf
-  asdf
-  asdf
+  fdaa
+  fdas
 
   ## Questions
-  For any questions reach out to me at asdf or at my GitHub asdf
+  For any questions reach out to me at fdaa or at my GitHub asdf
