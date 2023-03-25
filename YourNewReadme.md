@@ -1,29 +1,38 @@
+# testing1
 
-    #Fun Game
-    
-    ## Description 
-    It's a fun game. Play it and mess with the code
+  ## Table Of Contents
+  - Description
+  - License
+  - Installation
+  - Test
+  - Usage
+  - Contributing
+  - Credits
+  - Questions
+  
+  ## Description 
+  
+  testing2
 
-    ## License
-    MIT
+  ## License
+  MIT
 
-    ## Installation
-    npm i
+  ## Installation
+  npm i
 
-    ## Test
-    npm test
+  ## Test
+  npm test
 
-    ## Usage
-    Not much, it's the same as the rest of them
+  ## Usage
+  testing3
 
-    ## Contributing
-    Just fork it and make your own changes then submit a pull request
+  ## Contributing
+  testing5
 
-    ## Credits
-    EverittGill
-    eg.everittgill@gmail.com
-    https://www.linkedin.com/in/everitt-gill-574226a0/
+  ## Credits
+  testing4
+  testing 6
+  testing7
 
-    # Questions
-    For any questions reach out to me at eg.everittgill@gmail.com or at my GitHub EverittGill
-    
+  # Questions
+  For any questions reach out to me at testing 6 or at my GitHub testing4

@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./generateMarkdown.js')
-// const license = require('./licensechoices.js')
 
 
 
@@ -35,8 +34,8 @@ const generateMarkdown = require('./generateMarkdown.js')
 
 
 // TODO: Create an array of questions for user input
-inquirer
-.prompt([
+function init(){
+inquirer.prompt([
   {
     type: 'input',
     name: 'title',
@@ -113,12 +112,14 @@ inquirer
 
 
 
-// .then((answers) => {
-//     const mdPageContent = generateMarkdown(answers);
+.then((answers) => {
+    const mdPageContent = generateMarkdown(answers);
   
-//     fs.writeFile('YourNewReadme.md', mdPageContent, (err) =>
-//     err ? console.log(err) : console.log('IT WORKED!'))
-//   });
+    fs.writeFile('YourNewReadme.md', mdPageContent, (err) =>
+    err ? console.log(err) : console.log('IT WORKED!'))
+  });
+}
+init()
 
   // TODO: Create a function to write README file
 
@@ -127,24 +128,23 @@ inquirer
 // function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(prompts).then((inquireResponses) => {
-        const mdPageContent = generateMarkdown(inquireResponses);
-        fs.writeFile('YourNewReadme.md', mdPageContent, (err) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log("It Worked, check your new file");
-            }
-            });
-        });
-    }
+// function init() {
+//     inquirer.prompt(prompts).then((inquireResponses) => {
+//         const mdPageContent = generateMarkdown(inquireResponses);
+//         fs.writeFile('YourNewReadme.md', mdPageContent, (err) => {
+//             if (err) {
+//                 console.log(err);
+//             } else {
+//                 console.log("It Worked, check your new file");
+//             }
+//             });
+//         });
+//     }
     
 
 
 
 // Function call to initialize app
-init();
 
 
 
