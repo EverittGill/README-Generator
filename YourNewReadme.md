@@ -1,5 +1,5 @@
-# test
-  ![licenseBadge](https://img.shields.io/badge/MIT-blue.svg)
+# Tomorrows best game
+  ![licenseBadge](https://img.shields.io/badge/APACHE 11-blue.svg)
 
   ## Table Of Contents
   - [Description](#description)
@@ -13,10 +13,13 @@
   
   ## Description 
   
-  asdf
+  This will be the next best selling game
 
-  ## License
-  MIT
+  
+
+  
+  ## license 
+ We're using the APACHE 11 license
 
   ## Installation
   npm i
@@ -25,15 +28,17 @@
   npm test
 
   ## Usage
-  asdf
+  not much
 
   ## Contributing
-  fdsa
+  fork and submit a pull request
 
   ## Credits
-  asdf
-  fdaa
-  fdas
+  EverittGill
+
+  everittgill@yahoo.com
+
+  myLinkedInURL
 
   ## Questions
-  For any questions reach out to me at fdaa or at my GitHub asdf
+  For any questions reach out to me at everittgill@yahoo.com or at my GitHub EverittGill
