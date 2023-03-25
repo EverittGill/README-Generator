@@ -15,14 +15,14 @@ function generateMarkdown(answers) {
   return `# ${answers.title}
 
   ## Table Of Contents
-  - Description
-  - License
-  - Installation
-  - Test
-  - Usage
-  - Contributing
-  - Credits
-  - Questions
+  - [Description](#description)
+  - [License](#license)
+  - [Installation](#installation)
+  - [Test](#test)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Credits](#credits)
+  - [Questions](#questions)
   
   ## Description 
   
@@ -48,7 +48,7 @@ function generateMarkdown(answers) {
   ${answers.email}
   ${answers.linkedin}
 
-  # Questions
+  ## Questions
   For any questions reach out to me at ${answers.email} or at my GitHub ${answers.github}`;
 }
 
