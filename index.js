@@ -70,7 +70,7 @@ inquirer.prompt([
     const mdPageContent = generateMarkdown(answers);
   
     fs.writeFile('YourNewReadme.md', mdPageContent, (err) =>
-    err ? console.log(err) : console.log('IT WORKED!'))
+    err ? console.log(err) : console.log('IT WORKED! Now check your files in this directory for a new file named YourNewReadme'))
   });
 }
 init()
