@@ -10,7 +10,11 @@
 
 ## Installation and Usage
 
-To use the program just download it form the repository and open it up in your terminal. After that run the command "node index.js" and answer the questions. When you get to the end there will be a new file available for you and that's your newly constructed Readme file.
+To use the program just download it form the repository and open it up in your terminal. After that run the command "npm install inquirer@8.2.4" then "node index.js" and then answer the questions. When you get to the end there will be a new file available for you and that's your newly constructed Readme file.
+
+Check out this video for a demonstration
+
+https://watch.screencastify.com/v/ofwPEiZEEnIIHcj6nfKu
 
 
 
